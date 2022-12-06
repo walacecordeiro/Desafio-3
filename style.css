@@ -164,7 +164,7 @@ footer{
 
     header{
         max-width: clamp(30rem, 28vw, 37.7rem);
-        height: 100vh;
+        height: 100%vh;
 
         animation: leftright 700ms 350ms backwards;
     }
