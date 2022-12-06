@@ -158,13 +158,14 @@ footer{
         --fs-heading-primary: clamp(1rem, 4vw, 4rem);
         --fs-heading-secondary: clamp(1.4rem, 2vw, 2rem);
     }
+
     .gridDesk{
         display: flex;
     }
 
     header{
         max-width: clamp(30rem, 28vw, 37.7rem);
-        height: 100%vh;
+        height: 100vh;
 
         animation: leftright 700ms 350ms backwards;
     }
