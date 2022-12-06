@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    --fs-global: 1.6rem;
+    --fs-heading-primary: 4rem;
+    --fs-heading-secondary: 2rem;
+
+    --ff-body: 'Palanquin', sans-serif;
+    --ff-heading: 'Staatliches', cursive;
+
+    --fc-header-heading: hsl(0, 0%, 100%);
+    --fc-body: hsl(274, 84%, 12%);
+
+    --bg-header: hsl(218, 17%, 62%);
+    --bg-header-heading: hsl(275, 18%, 79%);
+    --bg-heading-card: hsl(312, 91%, 96%);
+}
+
+body{
+    font-size: var(--fs-global);
+    font-family: var(--ff-body);
+}
+
+h1, h2{
+    font-family: var(--ff-heading);
+    font-weight: 400;
+}
+
+h1{
+    font-size: var(--fs-heading-primary);
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+h2{
+    font-size: var(--fs-heading-secondary);
+    line-height: 3.4rem;
+
+    letter-spacing: 0.05em;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+    padding: 3.2rem 0 ;
+
+    background-color: var(--bg-header);
+}
+
+header img{
+    width: 13.7rem;
+}
+
+header h1{
+    text-align: center;
+    padding: 8px 0;
+    width: 100%;
+    background-color: var(--bg-header-heading);
+    color: var(--fc-header-heading);
+}
+
+.page{
+    max-width: 95%;
+    margin: 0 auto 6rem;
+}
+
+
+.page p{
+    text-align: center;
+    font-size: var(--fs-heading-secondary);
+    line-height: 2.5rem;
+    color: var(--fc-body);
+
+    margin: 1.4rem 0 6rem;
+}
+
+main{
+    display: grid;
+    gap: 3.2rem;
+
+    animation: downtop 700ms 175ms backwards;
+}
+
+.card{
+    position: relative;
+}
+
+.card img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.card .img-type-a{
+    height: 25rem;
+}
+
+.card .img-type-b{
+    height: 45rem;
+}
+
+.card h2{
+    background-color: var(--bg-heading-card);
+    border-radius: 2rem;
+    width: fit-content;
+    padding: 0 2.4rem;
+
+    text-transform: uppercase;
+
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+
+    animation: topdown 700ms 350ms backwards;
+}
+
+@keyframes downtop{
+    0%{
+        opacity: 0;
+        transform: translateY(1.5rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes topdown{
+    0%{
+        opacity: 0;
+        transform: translateY(-1.5rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
